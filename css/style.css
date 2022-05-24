@@ -921,6 +921,7 @@ nav .box-link ul li:hover a {
 .slide img {
     height: 450px !important;
 }
+
 /****************** Start services *************/
 .services-content {
     display: inline-block;
@@ -1084,6 +1085,7 @@ nav .box-link ul li:hover a {
     color: #fff;
     transition-delay: .5s;
 }
+
 .project .container .image-project img {
     transition: .5s;
 }
@@ -1091,6 +1093,7 @@ nav .box-link ul li:hover a {
 .project .container .image-project img:hover {
     transform: scale(1.05);
 }
+
 /*-------------------- Start Testimonial ----------------*/
 .testimonial-pepole {
     font-family: "Poppins", sans-serif;
@@ -1287,6 +1290,7 @@ footer .social .icon:hover::after {
     transform: translate(-50%, 0);
     visibility: visible;
 }
+
 @media (max-width: 767px) {}
 
 /****************** Start Animations *************/
