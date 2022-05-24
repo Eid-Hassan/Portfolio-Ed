@@ -21,8 +21,9 @@ let dark = document.getElementById( "dark" ),
 let about = document.getElementById( "about" ),
     aboutInfo = document.getElementById( "about-info" ),
     skills = document.getElementById( "skills-up" ),
-    spans = document.querySelectorAll( ".the-progress > span" ),
-    education = document.getElementById( "education" ),
+    spans = document.querySelectorAll( ".the-progress > span" );
+// ========== start info Education & Work
+let education = document.getElementById( "education" ),
     work = document.getElementById( "work" ),
     dataEducation = document.getElementById( "data-education" ),
     dataWork = document.getElementById( "data-work" ),
@@ -93,7 +94,6 @@ if ( education )
     education.addEventListener( "click", () =>
     {
         dataEducation.classList.toggle( "qualification-active" );
-        dataWork.classList.remove( "qualification-active" );
         edOne.classList.toggle( "one" );
         EdTwo.classList.toggle( "two" );
     } )
@@ -103,7 +103,6 @@ if ( work )
     work.addEventListener( "click", () =>
     {
         dataWork.classList.toggle( "qualification-active" );
-        dataEducation.classList.remove( "qualification-active" );
         EdOne.classList.toggle( "one" );
         edTwo.classList.toggle( "two" );
     } )
