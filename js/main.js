@@ -1,8 +1,8 @@
-// ======= Start locked
+// ======= Start locked =================
 let lock = document.getElementById( "container-lock" ),
     unlocked = document.getElementById( "unlock" ),
     upTop = document.getElementById( "up-top" );
-// ======= Start Nav Bar
+// ======= Start Nav Bar =================
 let linkes = document.getElementById( "nav-menu" ),
     closeLink = document.getElementById( "close-link" ),
     showLink = document.getElementById( "show-link" );
@@ -11,18 +11,18 @@ let layOut = document.getElementById( "layout" ),
     showCar = document.getElementById( "car-shop" ),
     empty = document.getElementById( "empty" ),
     layoutLi = document.querySelectorAll( ".lists" );
-// ======= Start Nav Bar Dark Mode
+// ======= Start Nav Bar Dark Mode =================
 let dark = document.getElementById( "dark" ),
     moon = document.getElementById( "moon" ),
     sun = document.getElementById( "sun" ),
     option = document.getElementById( "option" ),
     optionLi = document.getElementById( "option-li" );
-// ========== scroll info about
+// ========== scroll info about =================
 let about = document.getElementById( "about" ),
     aboutInfo = document.getElementById( "about-info" ),
     skills = document.getElementById( "skills-up" ),
     spans = document.querySelectorAll( ".the-progress > span" );
-// ========== start info Education & Work
+// ========== start info Education & Work =================
 let education = document.getElementById( "education" ),
     work = document.getElementById( "work" ),
     dataEducation = document.getElementById( "data-education" ),
@@ -40,7 +40,7 @@ let edOne = document.getElementById( "one-sp" ),
     EdOne = document.getElementById( "one-sap" ),
     EdTwo = document.getElementById( "two-sp" ),
     edTwo = document.getElementById( "two-sap" );
-// ======= Start locked
+// ======= Start locked ==========
 if ( lock )
 {
     lock.addEventListener( "click", () =>
@@ -49,7 +49,7 @@ if ( lock )
         unlocked.style.display = "block";
     } )
 };
-// ================= Function for Nav
+// ================= Function for Nav =================
 if ( showLink )
 {
     showLink.addEventListener( "click", () =>
@@ -68,7 +68,7 @@ if ( closeLink )
         showLink.style.display = "block"
     } )
 };
-// ============ Function For Dark Mode
+// ============ Function For Dark Mode =================
 if ( moon )
 {
     moon.addEventListener( "click", () =>
@@ -88,7 +88,7 @@ if ( sun )
         optionLi.classList.remove( ".edit-color-after span" )
     } )
 };
-// ================= Function for Qualification
+// ================= Function for Qualification =================
 if ( education )
 {
     education.addEventListener( "click", () =>
@@ -127,7 +127,7 @@ switcherLis.forEach( ( ele ) =>
     }
     );
 } );
-// ================= Functin For Scoll Window
+// ================= Functin For Scoll Window =================
 window.onscroll = function ()
 {
     if ( window.scrollY >= 400 )

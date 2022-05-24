@@ -1,4 +1,4 @@
-/* Start Global Rules */
+/******************* Start Global Rules *******************/
 :root {
     --main-color: #E6E6FA;
     --main-color-alt: #D3D3D3;
@@ -129,28 +129,28 @@ ul {
     margin-right: auto;
 }
 
-/* Small */
+/******************* Small *******************/
 @media (min-width: 765px) {
     .container {
         width: 750px;
     }
 }
 
-/* Medium */
+/******************* Medium *******************/
 @media (min-width: 992px) {
     .container {
         width: 970px;
     }
 }
 
-/* Large */
+/******************* Large *******************/
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
 }
 
-/* Start Button */
+/******************* Start Button *******************/
 .btn {
     outline: none;
 }
@@ -159,7 +159,7 @@ ul {
     animation: pulsate 1s ease-in-out;
 }
 
-/* End Button */
+/******************* End Button *******************/
 /****************** Start lock **********/
 .unlock {
     display: none;
@@ -194,7 +194,7 @@ button:not(:disabled):hover {
     background-color: var(--color-text);
 }
 
-/* Start Lock */
+/******************* Start Lock *******************/
 .container-lock {
     width: 400px;
     height: 600px;
