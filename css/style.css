@@ -391,6 +391,13 @@ nav .box-link .side-bar.open span:nth-child(3) {
     color: var(--color-text);
     letter-spacing: 4px;
     text-transform: uppercase;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 
 nav .box-link ul {
@@ -409,18 +416,20 @@ nav .box-link ul li {
     transition: var(--main-transition);
 }
 
+nav .box-link ul li a h4 {
+    padding-top: 10px;
+}
+
 nav .box-link ul li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
     position: relative;
     color: var(--color-text);
     transition: var(--main-transition);
 }
 
-nav .box-link ul li a>i {
+nav .box-link ul li .icon i {
     transition: var(--main-transition);
+    color: var(--color-text);
     padding-right: 10px;
 }
 
@@ -430,14 +439,14 @@ nav .box-link ul li::before {
     width: 75%;
     height: 3px;
     background-color: var(--color-text-hover);
-    bottom: -55%;
+    top: 112%;
     border-radius: 6px;
     opacity: 0;
 }
 
-nav .box-link ul li a:hover>i,
+nav .box-link ul li:hover .icon>i,
 nav .box-link ul li:hover::before,
-nav .box-link ul li a:hover {
+nav .box-link ul li:hover a {
     color: var(--color-text-hover);
     opacity: 1;
 }
@@ -465,13 +474,15 @@ nav .box-link ul li a:hover {
 }
 
 /* Start Media For Nav */
-@media (max-width: 767px) {
+@media (max-width: 1050px) {
     .up {
         right: 30px;
     }
 
     nav .container-me {
         height: 90px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     nav .box-link .side-bar {
@@ -495,69 +506,129 @@ nav .box-link ul li a:hover {
     nav .box-link .layout.show-lay {
         opacity: 1 !important;
         position: fixed;
-        height: 150vh !important;
+        height: 101vh !important;
         display: block;
+        min-height: 500px;
+        background: #2f363e;
+        box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+            10px 10px 70px rgba(0, 0, 0, 0.25),
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+
     }
 
     nav .box-link ul {
-        display: block !important;
-        z-index: 99;
-        position: absolute;
-        top: 10%;
-        left: -1%;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 350px;
+        min-height: 500px;
+        padding: 50px;
+        background: #2f363e;
+        box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+            10px 10px 70px rgba(0, 0, 0, 0.25),
+            inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+            inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+            inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+        border-radius: 30px;
+        top: 7%;
+        left: 5%;
     }
 
-    nav .box-link ul li {
-        width: 15em;
-        height: 3em;
-        box-sizing: border-box;
-        font-size: 20px;
-        border-radius: 0.5em;
-        margin: 0.5em;
-        box-shadow: 0 0 1em rgb(60 106 201 / 39%);
-        transition: var(--main-transition);
+    nav .box-link ul .lists {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
         cursor: pointer;
     }
 
-    nav .box-link ul li:nth-child(1),
-    nav .box-link ul li:nth-child(3),
-    nav .box-link ul li:nth-child(5) {
-        background: linear-gradient(to right, #4941e0, #dc4f4f);
-        text-align: left;
-        padding-left: 10%;
-        transform: perspective(500px) rotateY(54deg);
+    nav .box-link ul .lists::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55px;
+        height: 55px;
+        background: #1f83f2;
+        border-radius: 22.5px;
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+            inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+            inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        opacity: 1;
     }
 
-    nav .box-link ul li:nth-child(2),
-    nav .box-link ul li:nth-child(4),
-    nav .box-link ul li:nth-child(6) {
-        background: linear-gradient(to left, #4941e0, #dc4f4f);
-        text-align: right;
-        padding-right: 10%;
-        transform: perspective(500px) rotateY(-54deg);
+    nav .box-link ul li:hover::before {
+        width: 100%;
     }
 
-    nav .box-link ul li:nth-child(1):hover,
-    nav .box-link ul li:nth-child(3):hover,
-    nav .box-link ul li:nth-child(5):hover {
-        transform: perspective(1000px) rotateY(0deg);
-        padding-left: 5%;
+    nav .box-link ul li .icon {
+        color: white;
+        position: relative;
+        min-width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 10px;
     }
 
-    nav .box-link ul li:nth-child(2):hover,
-    nav .box-link ul li:nth-child(4):hover,
-    nav .box-link ul li:nth-child(6):hover {
-        transform: perspective(1000px) rotateY(0deg);
-        padding-right: 5%;
+    nav .box-link ul li .icon::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10%;
+        width: 30px;
+        height: 30px;
+        background: #2f363e;
+        border-radius: 30px;
+        transform: scale(0);
+        transition: 0.5s;
+    }
+
+    nav .box-link ul li:hover .icon::before {
+        transform: scale(1.2);
+    }
+
+    nav .box-link ul li .icon i {
+        position: relative;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 16px;
+        transition: 0.5s;
+        margin-right: 30px;
     }
 
     nav .box-link ul li a {
-        color: white;
-        font-weight: bold;
+        position: relative;
+        line-height: 1.15rem;
     }
 
-    nav .box-link ul li::before {
-        display: none;
+    nav .box-link ul li a h4 {
+        font-weight: 600;
+        color: #bcbcc0;
+        transition: 0.5s;
+    }
+
+    nav .box-link ul li:hover a h4 {
+        color: #fff;
+    }
+}
+
+@media (max-width: 1150px) {
+    nav .container-me {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    nav .box-link ul li {
+        padding: 10px 10px;
     }
 }
 
@@ -565,6 +636,12 @@ nav .box-link ul li a:hover {
     nav .container-me {
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    nav .box-link ul {
+        width: 250px;
     }
 }
 
