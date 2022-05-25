@@ -1253,8 +1253,10 @@ nav .box-link ul li:hover a {
 
 /****************** Start Footer *************/
 footer .social .icon {
+    /* text-decoration: none; */
     position: relative;
     display: inline-flex;
+    cursor: pointer;
 }
 
 footer .social .icon i {
@@ -1266,17 +1268,13 @@ footer .social .icon i {
 }
 
 footer .social .icon::after {
-    content: '';
+    content: attr(data-tooltip);
     position: absolute;
+    top: -35px;
     left: 50%;
     transform: translate(-50%, 3px);
     visibility: hidden;
-    transition: .5s;
-}
-
-footer .social .icon::after {
-    content: attr(data-tooltip);
-    top: -35px;
+    transition: .2s;
     padding: 2px 5px;
     border-radius: 6px;
     color: white;
@@ -1285,13 +1283,10 @@ footer .social .icon::after {
     background-color: var(--color-text-hover);
 }
 
-footer .social .icon:hover::before,
 footer .social .icon:hover::after {
     transform: translate(-50%, 0);
     visibility: visible;
 }
-
-@media (max-width: 767px) {}
 
 /****************** Start Animations *************/
 @keyframes up {
