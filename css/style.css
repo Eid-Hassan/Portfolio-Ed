@@ -534,7 +534,7 @@ nav .box-link ul li:hover a {
     }
 
     nav .box-link ul {
-        display: flex !important;
+        display: inline-block !important;
         flex-direction: column !important;
         justify-content: center;
         align-items: center;
@@ -554,6 +554,7 @@ nav .box-link ul li:hover a {
     }
 
     nav .box-link ul .lists {
+        justify-content: start;
         position: relative;
         display: flex;
         align-items: center;
@@ -564,10 +565,10 @@ nav .box-link ul li:hover a {
     nav .box-link ul .lists::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 55px;
-        height: 55px;
+        top: 4px;
+        left: -1px;
+        width: 45px;
+        height: 40px;
         background: #1f83f2;
         border-radius: 22.5px;
         box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
@@ -597,9 +598,9 @@ nav .box-link ul li:hover a {
         content: '';
         position: absolute;
         top: 0;
-        left: -10%;
-        width: 30px;
-        height: 30px;
+        left: -4%;
+        width: 25px;
+        height: 25px;
         background: #2f363e;
         border-radius: 30px;
         transform: scale(0);
@@ -618,6 +619,7 @@ nav .box-link ul li:hover a {
         margin-bottom: 16px;
         transition: 0.5s;
         margin-right: 30px;
+        transform: translateX(3px);
     }
 
     nav .box-link ul li a {
@@ -629,6 +631,7 @@ nav .box-link ul li:hover a {
         font-weight: 600;
         color: #bcbcc0;
         transition: 0.5s;
+        transform: translate(-15px, -7px);
     }
 
     nav .box-link ul li:hover a h4 {
