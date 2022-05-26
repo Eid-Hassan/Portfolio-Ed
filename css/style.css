@@ -932,9 +932,15 @@ nav .box-link ul li:hover a {
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    border: 5px solid var(--color-text);
     transition: var(--main-transition);
     cursor: pointer;
+    box-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 
 .services-content .box {
@@ -945,15 +951,19 @@ nav .box-link ul li:hover a {
     z-index: 10;
     background-color: #fff;
 }
-.services-content .box >i{
+
+.services-content .box>i {
     font-size: 22px;
 }
+
 .services-content .box>span>a {
     text-decoration: none;
 }
-.services-content:hover .box>span>a>i{
+
+.services-content:hover .box>span>a>i {
     animation: animate-border .75s linear infinite;
 }
+
 @media (max-width: 765px) {
     .services-content {
         width: 70%;
