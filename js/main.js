@@ -48,8 +48,8 @@ if ( lock )
     {
         locked.classList.add( "open" );
         setInterval(() => {
-            // lock.style.display = "none";
-            // unlocked.style.display = "block";
+            lock.style.display = "none";
+            unlocked.style.display = "block";
         }, 1000);
     } )
 };
