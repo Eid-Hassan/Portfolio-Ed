@@ -225,7 +225,7 @@ button:not(:disabled):hover {
     height: 99%;
     border: 30px solid rgb(190 189 189);
     background-color: rgb(190 189 189);
-    transition: .5s;
+    transition: .3s;
 }
 .container-lock .lock.open {
     transform: rotateY(48deg) translateX(80px);
