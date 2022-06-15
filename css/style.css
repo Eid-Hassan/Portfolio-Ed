@@ -229,8 +229,8 @@ button:not(:disabled):hover {
 }
 .container-lock .lock.open {
     transform: rotateY(48deg) translateX(80px);
+    box-shadow: -10px 16px 40px -20px #919191;
 }
-
 .container-lock .one {
     position: absolute;
     background-color: red;
