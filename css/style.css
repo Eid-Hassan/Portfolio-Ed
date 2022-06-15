@@ -217,6 +217,7 @@ button:not(:disabled):hover {
         1px 22px 10px rgba(16, 16, 16, 0.2),
         1px 25px 35px rgba(16, 16, 16, 0.2),
         1px 30px 60px rgba(16, 16, 16, 0.4);
+        transition: 1s;
 }
 
 .container-lock .lock {
@@ -225,6 +226,9 @@ button:not(:disabled):hover {
     border: 30px solid rgb(190 189 189);
     background-color: rgb(190 189 189);
     transition: .5s;
+}
+.container-lock .lock.open {
+    transform: rotateY(48deg) translateX(80px);
 }
 
 .container-lock .one {
@@ -289,7 +293,7 @@ button:not(:disabled):hover {
     background-color: black;
 }
 
-.container-lock>i {
+.container-lock .halved {
     z-index: 5;
     width: 100px;
     height: 100px;

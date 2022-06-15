@@ -1,5 +1,6 @@
 // ======= Start locked =================
 let lock = document.getElementById( "container-lock" ),
+    locked = document.getElementById("lock"),
     unlocked = document.getElementById( "unlock" ),
     upTop = document.getElementById( "up-top" );
 // ======= Start Nav Bar =================
@@ -45,8 +46,11 @@ if ( lock )
 {
     lock.addEventListener( "click", () =>
     {
-        lock.style.display = "none";
-        unlocked.style.display = "block";
+        locked.classList.add( "open" );
+        setInterval(() => {
+            lock.style.display = "none";
+            unlocked.style.display = "block";
+        }, 1000);
     } )
 };
 // ================= Function for Nav =================
