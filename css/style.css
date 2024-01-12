@@ -178,7 +178,6 @@ ul {
 .up .btn-outline-primary:focus {
     box-shadow: none !important;
 }
-
 .up button i {
     animation: up 1s infinite linear;
 }
@@ -806,15 +805,50 @@ nav .box-link ul li:hover a {
 }
 
 .about .box-up .cv a {
-    padding: 0 32px;
-    border-radius: 30px;
-    background-color: #4503dc;
+    background-color: var(--color-text);
+    display: inline-block;
+    padding: 0.65em 1.6em;
+    border: 3px solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     color: #ffffff;
-    box-shadow: 0 5px 0 0 var(--color-text);
-    letter-spacing: 3px;
-    transition: var(--main-transition);
+    text-align: center;
+    transition: all 0.2s;
+    animation: bn13bouncy 5s infinite linear;
+    position: relative;
 }
-
+.about .box-up .cv :hover{
+    background-color: white;
+    color: #000000;
+    border-color: var(--color-text);
+}
+@keyframes bn13bouncy {
+    0% {
+      top: 0em;
+    }
+    40% {
+      top: 0em;
+    }
+    43% {
+      top: -0.9em;
+    }
+    46% {
+      top: 0em;
+    }
+    48% {
+      top: -0.4em;
+    }
+    50% {
+      top: 0em;
+    }
+    100% {
+      top: 0em;
+    }
+  }
 .about .box-up .cv a:active {
     transform: translateY(5px);
     box-shadow: 0 2px 0 0 var(--color-text);
